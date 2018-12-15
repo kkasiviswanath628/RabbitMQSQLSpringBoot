@@ -1,0 +1,46 @@
+https://github.com/springframeworkguru/spring-boot-rabbitmq-example
+
+C:\Program Files\erl10.1
+
+C:\Program Files\RabbitMQ Server
+
+https://github.com/springframeworkguru/spring-boot-rabbitmq-example
+
+* Message broker that implements Advanced Message Queuing Protocal (AMQP).
+
+* AMQP Standadizes messaging using Producers , Broker and Consumers.
+
+* Messaging increases loose coupling and scalability.
+
+  Producer -> Exchange -> Queue -> Consumer
+  
+  Message is publishing through Producer , Exchange , Queue and it is consumes in consumer.
+  
+  binding key : message by routing key using binding key it it is forword to related consumer directly.
+  
+  Fanout : Message is sent through all consumer from Queue.
+  
+  Direct : routing key = binding key 
+  
+  Topic : partial match 
+  
+  Header : Message header instead of routing key 
+  
+  Default (nameless) exchange : routing key = queue name 
+  
+  Core concepts :
+  ===============
+  
+  * Producer emits messages to exchange.
+  * Consumer receives messages from queue.
+  * Binding Connects an exchange with a queue using binding key.
+  * Exchange compares routing key with binding key.
+  * Messages distribution depends on exchange type.
+  * Exchange types : fanout,direct,topic and headers
+  
+  * Default (nameless) exchange
+    * special exchange created by RabbitMQ
+	* Compares routing key with queue name
+	* Indirectly allows sending directly to queues
+  
+  
